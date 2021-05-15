@@ -1,6 +1,6 @@
 # Yearn Open Issues Browser
 
-browse on: - [YEARN Issues](https://github.com/verynifty/yearn-issues)
+browse on: - [YEARN Issues](https://yearn-issues.surge.sh)
 
 ### Credits
 
