@@ -5,10 +5,6 @@
           "name": "iearn-finance"
       },
       {
-          "full_name": "yearn/yearn-protocol",
-          "name": "yearn-protocol"
-      },
-      {
           "full_name": "yearn/yearn-sdk",
           "name": "yearn-sdk"
       },
