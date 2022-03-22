@@ -67,7 +67,7 @@ async function fetchRepoIssues(repo) {
     let issues = await issueRes.json();
 
     issues = issues.filter((i) => !i.pull_request);
-
+    issues = issues.filter((i) => (i?.labels || []).find(l => l.name === 'good first issue'));
     if (issues.length === 0) {
         return;
     }
@@ -106,18 +106,14 @@ async function fetchRepoIssues(repo) {
             span.className = 'badge ml-1';
             span.style = `background-color: #${label.color};`;
             span.textContent = label.name;
-
             labelDiv.appendChild(span);
-
             itemDiv.appendChild(labelDiv);
         }
 
-        /* Probably done better in CSS... */
         const small = document.createElement('small');
         small.className = 'd-block text-muted mt-n1';
         small.textContent = `#${issue.number} opened on ${fixDate(issue.created_at)} by ${issue.user.login}`;
         itemDiv.appendChild(small);
-
         listItemDiv.appendChild(itemDiv);
 
         const issueCommentsLink = document.createElement('a');
@@ -129,7 +125,6 @@ async function fetchRepoIssues(repo) {
 
         issueCommentsLink.appendChild(createCommentSVG());
         issueCommentsLink.appendChild(document.createTextNode(issue.comments));
-
         listItemDiv.appendChild(issueCommentsLink);
         issuesDiv.appendChild(listItemDiv);
     }
