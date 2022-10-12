@@ -1,6 +1,6 @@
 # Yearn Open Issues Browser
 
-- Live Page: [contribute.yearn.rocks](https://contribute.yearn.rocks)
+- Check it out: [contribute.yearn.farm](https://contribute.yearn.farm)
 
 ## Quickstart
 
