@@ -64,12 +64,11 @@ function createCommentSVG() {
 
 async function fetchRepoIssues(repo) {
     const issueRes = await fetch(`https://api.github.com/repos/${repo.full_name}/issues`);
+    if (issueRes.status !== 200) {
+        return;
+    }
+
     let issues = await issueRes.json();
-
-    issues = issueRes.ok 
-        ? await issueRes.json()
-        : []
-
     issues = issues.filter((i) => !i.pull_request);
     issues = issues.filter((i) => (i?.labels || []).find(l => l.name === 'good first issue'));
     if (issues.length === 0) {
