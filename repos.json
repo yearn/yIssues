@@ -97,7 +97,7 @@
       },
       {
         "full_name": "yearn-exporter-api",
-        "name": "xporter-api"
+        "name": "exporter-api"
       },
       {
         "full_name": "yearn/yearn-simulations",
