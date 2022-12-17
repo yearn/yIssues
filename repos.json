@@ -96,6 +96,10 @@
         "name": "YIPS"
       },
       {
+        "full_name": "yearn-exporter-api",
+        "name": "xporter-api"
+      },
+      {
         "full_name": "yearn/yearn-simulations",
         "name": "yearn-simulations"
       }
