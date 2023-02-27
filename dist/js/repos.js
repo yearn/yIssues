@@ -98,6 +98,10 @@ const   yearnRepos = [
       {
         "full_name": "yearn/yearn-simulations",
         "name": "yearn-simulations"
+      },
+      {
+        "full_name": "yearn/ygenius-webui",
+        "name": "ygenius-webui"
       }
   
 ]
