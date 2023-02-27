@@ -91,6 +91,10 @@ a.link-bg:hover {
   background: #43b380;
 }
 
+.text-body {
+  word-break: break-all;
+}
+
 .text-break {
   display: block !important;
 }
